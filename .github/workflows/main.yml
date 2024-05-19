@@ -15,6 +15,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: Night-stars-1/test1
+        token: ${{ secrets.GAYHUB_TOKEN }} 
         path: target-repo
         
     - name: Make changes
@@ -29,4 +30,3 @@ jobs:
         author_email: "actions@github.com"
         message: "Commit from GitHub Actions"
         cwd: "target-repo"
-        github_token: ${{ secrets.GAYHUB_TOKEN }} 
