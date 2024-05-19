@@ -29,4 +29,4 @@ jobs:
         author_email: "actions@github.com"
         message: "Commit from GitHub Actions"
         cwd: "target-repo"
-        token: ${{ secrets.GAYHUB_TOKEN }} 
+        github_token: ${{ secrets.GAYHUB_TOKEN }} 
