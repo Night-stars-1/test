@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the target repository
+    - name: Checkout the source repository
       uses: actions/checkout@v2
         
-    - name: Checkout the source repository
+    - name: Checkout the target repository
       uses: actions/checkout@v2
       with:
         repository: Night-stars-1/test1
