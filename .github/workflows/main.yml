@@ -20,8 +20,8 @@ jobs:
         
     - name: Make changes
       run: |
-        # 这里添加你想对文件进行的更改，例如：
-        echo "New content1" > target-repo/new-file.txt
+        RANDOM_NUMBER=$RANDOM
+        echo "New content with random number: $RANDOM_NUMBER" > target-repo/new-file.txt
 
     - name: Commit and push changes to the target repository
       uses: EndBug/add-and-commit@v9.1.4
