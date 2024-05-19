@@ -1,0 +1,31 @@
+name: Commit to Other Repo
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the target repository
+      uses: actions/checkout@v2
+        
+    - name: Checkout the source repository
+      uses: actions/checkout@v2
+      with:
+        repository: Night-stars-1/test1
+        path: target-repo
+        
+    - name: Make changes
+      run: |
+        # 这里添加你想对文件进行的更改，例如：
+        echo "New content" > target-repo/new-file.txt
+
+    - name: Commit and push changes to the target repository
+      uses: EndBug/add-and-commit@v9.1.4
+      with:
+        author_name: "GitHub Actions"
+        author_email: "actions@github.com"
+        message: "Commit from GitHub Actions"
+        cmd: "target-repo"
