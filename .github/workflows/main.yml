@@ -28,4 +28,4 @@ jobs:
         author_name: "GitHub Actions"
         author_email: "actions@github.com"
         message: "Commit from GitHub Actions"
-        cmd: "target-repo"
+        cwd: "target-repo"
